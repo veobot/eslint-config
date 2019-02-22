@@ -11,7 +11,6 @@ module.exports = {
     './rules/plugins/import',
     './rules/plugins/jest',
     './rules/plugins/promise',
-    './rules/plugins/react',
     './rules/plugins/security',
     './rules/plugins/typescript',
     './rules/plugins/vue',

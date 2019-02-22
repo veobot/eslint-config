@@ -22,18 +22,6 @@ describe('typescript', () => {
   });
 });
 
-describe('react', () => {
-  it('fails when the file is not formatted correctly', () => {
-    expect(lint('react/fail.jsx')).toBe(1);
-    expect(lint('react/fail.tsx')).toBe(1);
-  });
-
-  it('passes when the file is formatted correctly', () => {
-    expect(lint('react/pass.jsx')).toBe(0);
-    expect(lint('react/pass.tsx')).toBe(0);
-  });
-});
-
 describe('vue', () => {
   it('fails when the file is not formatted correctly', () => {
     expect(lint('vue/fail.vue')).toBe(1);
