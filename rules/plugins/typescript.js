@@ -30,7 +30,7 @@ module.exports = {
     '@typescript-eslint/no-angle-bracket-type-assertion': 'error', // .tsx can't be parsed without the "as Type" style
     '@typescript-eslint/no-array-constructor': 'error', // disallow Array constructor
     '@typescript-eslint/no-empty-interface': 'error', // disallow empty interfaces
-    '@typescript-eslint/no-explicit-any': 'error', // no any types
+    '@typescript-eslint/no-explicit-any': 'off', // allow explicit any types
     '@typescript-eslint/no-inferrable-types': 'error', // don't define type for primitive types since they're easily inferred
     '@typescript-eslint/no-namespace': 'error', // prefer es6 style modules to outdated module/namespace syntax
     '@typescript-eslint/no-non-null-assertion': 'off', // allow for foo.bar!.baz instead of foo.bar && foo.bar.baz

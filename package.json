@@ -1,11 +1,10 @@
 {
   "name": "@veobot/eslint-config",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Veo Robotics ESLint rules for all JavaScript / TypeScript projects",
   "author": {
     "name": "Ty-Lucas Kelley",
-    "email": "ty@greylocklabs.com",
-    "url": "https://tylucaskelley.com"
+    "email": "ty@veobot.com"
   },
   "homepage": "https://github.com/veobot/eslint-config",
   "bugs": "https://github.com/veobot/eslint-config/issues",
@@ -25,23 +24,26 @@
     "lint"
   ],
   "scripts": {
-    "lint": "npm run lint:js && npm run lint:md",
-    "lint:js": "eslint --report-unused-disable-directives index.js rules/** test/index.test.js",
+    "preinstall": "node -e \"if (!~process.env.npm_execpath.indexOf('yarn')) throw new Error('Install dependencies with yarn, not npm')\"",
+    "lint": "yarn lint:js && yarn lint:md && yarn lint:unused",
+    "lint:js": "eslint index.js rules/**/*.js test/**/pass.* test/*.js",
+    "lint:unused": "eslint --report-unused-disable-directives index.js rules/**/*",
     "lint:md": "markdownlint README.md CHANGELOG.md",
-    "pretest": "npm run lint",
+    "pretest": "yarn lint",
     "test": "jest",
     "find-rules": "eslint-find-rules --unused",
-    "prepublishOnly": "npm test"
+    "prepublishOnly": "yarn test"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm test",
-      "pre-push": "npm test"
+      "pre-commit": "yarn test",
+      "pre-push": "yarn test"
     }
   },
   "main": "index.js",
   "engines": {
-    "node": ">= 8"
+    "node": ">= 8",
+    "yarn": "1.15.*"
   },
   "peerDependencies": {
     "@babel/cli": "7.2.3",
@@ -51,6 +53,7 @@
     "@typescript-eslint/eslint-plugin": "1.4.0",
     "@vue/eslint-config-typescript": "4.0.0",
     "eslint": "5.14.1",
+    "eslint-import-resolver-typescript": "1.1.1",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jest": "22.3.0",
     "eslint-plugin-promise": "4.0.1",
@@ -68,6 +71,7 @@
     "@vue/eslint-config-typescript": "4.0.0",
     "eslint": "5.14.1",
     "eslint-find-rules": "3.3.1",
+    "eslint-import-resolver-typescript": "1.1.1",
     "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jest": "22.3.0",
     "eslint-plugin-promise": "4.0.1",
@@ -78,6 +82,7 @@
     "markdownlint-cli": "0.13.0",
     "shelljs": "0.8.3",
     "typescript": "3.3.3",
+    "typescript-eslint-parser": "^22.0.0",
     "vue": "2.6.6",
     "vue-eslint-parser": "6.0.2"
   }

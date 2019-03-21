@@ -1,5 +1,5 @@
 const indentSize = 2;
-const maxNestedCallbacks = 3;
+const maxNestedCallbacks = 5;
 
 module.exports = {
   rules: {
@@ -94,7 +94,7 @@ module.exports = {
     'multiline-comment-style': [ 'error', 'starred-block' ], // consistent multiline comments
     'multiline-ternary': [ 'error', 'never' ], // no multiline ternary expressions
 
-    'new-cap': 'error', // capital letter for constructors
+    'new-cap': 'off', // capital letter for constructors
     'new-parens': 'error', // require constructors to be called with parentheses
     'newline-per-chained-call': [ 'error', { ignoreChainWithDepth: 3 } ], // allow chained calls on one line up to 3 in a row
     'no-array-constructor': 'error', // disallow use of Array constructor
