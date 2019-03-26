@@ -43,7 +43,7 @@
   "main": "index.js",
   "engines": {
     "node": ">= 8",
-    "yarn": "1.15.*"
+    "yarn": ">= 1.13.0"
   },
   "peerDependencies": {
     "@babel/cli": "7.2.3",

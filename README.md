@@ -39,7 +39,7 @@ file and add new or existing rules to it with your preferred settings:
 ## Testing
 
 To run tests for this package, install the development dependencies with
-`npm install` from this folder and then run `npm test`.
+`yarn install` from this folder and then run `yarn test`.
 
 ## License
 
