@@ -1,11 +1,23 @@
 <template>
-  <p>The number of the day is {{ num }}</p>
+  <div>
+    <p>The number of the day is {{ num }}</p>
+    <p>{{ $t('Test key') }}</p>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import VueI18n from 'vue-i18n';
+
+Vue.use(VueI18n);
+
+const i18n = new VueI18n({
+  locale: 'en',
+  messages,
+});
 
 export default Vue.extend({
+  i18n,
   name: 'ComponentName',
   data: () => ({
     num: 5,
