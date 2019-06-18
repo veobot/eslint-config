@@ -6,9 +6,15 @@ All notable changes to this project will be documented in this file. The format 
 
 ---
 
-## [Unreleased](https://github.com/veobot/eslint-config/compare/1.2.2...HEAD)
+## [Unreleased](https://github.com/veobot/eslint-config/compare/1.3.0...HEAD)
 
 - N/A
+
+## [1.3.0](https://github.com/veobot/eslint-config/releases/tag/1.3.0) - 2019-06-18
+
+### Added
+
+- Linting rules for Vue i18n missing or unused keys
 
 ## [1.2.2](https://github.com/veobot/eslint-config/releases/tag/1.2.2) - 2019-03-26
 

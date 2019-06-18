@@ -14,6 +14,7 @@ module.exports = {
     './rules/plugins/security',
     './rules/plugins/typescript',
     './rules/plugins/vue',
+    './rules/plugins/vue-i18n',
   ].map(require.resolve),
   parserOptions: {
     ecmaVersion: 10,
