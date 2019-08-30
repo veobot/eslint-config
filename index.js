@@ -12,7 +12,6 @@ module.exports = {
     './rules/plugins/jest',
     './rules/plugins/promise',
     './rules/plugins/security',
-    './rules/plugins/typescript',
     './rules/plugins/vue',
     './rules/plugins/vue-i18n',
   ].map(require.resolve),
@@ -20,4 +19,10 @@ module.exports = {
     ecmaVersion: 10,
     sourceType: 'module',
   },
+  overrides: [
+    {
+      files: [ '*.ts', '*.tsx', '*.vue' ], // Apply TypeScript rules to these filetypes
+      extends: [ './rules/plugins/typescript' ],
+    },
+  ],
 };

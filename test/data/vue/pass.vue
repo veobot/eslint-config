@@ -16,11 +16,13 @@ const i18n = new VueI18n({
   messages,
 });
 
+const getNumber = (): number => 5;
+
 export default Vue.extend({
   i18n,
   name: 'ComponentName',
   data: () => ({
-    num: 5,
+    num: getNumber(),
   }),
 });
 </script>
