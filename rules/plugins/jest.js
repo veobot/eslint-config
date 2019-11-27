@@ -38,8 +38,6 @@ module.exports = {
     'jest/prefer-to-contain': 'error', // suggest using toContain()
     'jest/prefer-to-have-length': 'error', // suggest using toHaveLength()
 
-    'jest/require-tothrow-message': 'error', // require a message for toThrow()
-
     'jest/valid-describe': 'warn', // enforce valid describe() callback
     'jest/valid-expect-in-promise': 'error', // enforce having return statement when testing with promises
     'jest/valid-expect': 'error', // enforce valid expect() usage
