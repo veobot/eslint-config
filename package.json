@@ -1,6 +1,6 @@
 {
   "name": "@veobot/eslint-config",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "Veo Robotics ESLint rules for all JavaScript / TypeScript projects",
   "homepage": "https://github.com/veobot/eslint-config",
   "bugs": "https://github.com/veobot/eslint-config/issues",
