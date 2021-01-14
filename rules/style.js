@@ -30,7 +30,7 @@ module.exports = {
         allowArrowFunctions: true,
       },
     ],
-    'function-paren-newline': 'error', // if newline inside function params, place newline between parentheses
+    'function-paren-newline': [ 'error', 'consistent' ], // if newline inside function params, place newline between each parameter argument
 
     'id-blacklist': 'off', // no blacklist for variable or function names
     'id-length': 'off', // no min or max identifier length
